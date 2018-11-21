@@ -27,27 +27,27 @@
                 <th>내용</th>
             </tr>
             <tr>
-                <td>제목</td> <!-- 위에서 in posts 지정했기 때문에 아래도 post.~-->
+                <td>제목</td>
                 <td><h2>{{ object.title }}</h2></td>
             </tr>
             <tr>
-                <td>슬러그</td> <!-- 위에서 in posts 지정했기 때문에 아래도 post.~-->
+                <td>슬러그</td>
                 <td>{{ object.slug }}</td>
             </tr>
             <tr>
-                <td>한 줄 요약</td> <!-- 위에서 in posts 지정했기 때문에 아래도 post.~-->
+                <td>한 줄 요약</td>
                 <td>{{ object.description }}</td>
             </tr>
             <tr>
-                <td>내용</td> <!-- 위에서 in posts 지정했기 때문에 아래도 post.~-->
+                <td>내용</td>
                 <td>{{ object.content|linebreaks }}</td>
             </tr>
             <tr>
-                <td>최초 등록 일시</td> <!-- 위에서 in posts 지정했기 때문에 아래도 post.~-->
+                <td>최초 등록 일시</td>
                 <td>{{ object.create_date|date:"Y년 m월 d일" }}</td>
             </tr>
             <tr>
-                <td>최근 수정 일시</td> <!-- 위에서 in posts 지정했기 때문에 아래도 post.~-->
+                <td>최근 수정 일시</td>
                 <td>{{ object.modify_date|date:"Y년 m월 d일" }}</td>
             </tr>
             <!--ch07 추가-->
@@ -75,6 +75,7 @@
                     <embed type="text/html" src="{% url 'blog:tag_cloud' %}">
                 </td>
             </tr>
+
         </table>
         <br/>
     </div>

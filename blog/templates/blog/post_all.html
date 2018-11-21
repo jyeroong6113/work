@@ -4,7 +4,7 @@
 {% block extrastyle %}{% static "css/tabular.css" %}{% endblock %}
 {% block content %}
     <div id="content">
-        <h1 class = "centered">블로그 목록 (표 형식)</h1>
+        <h1 class="centered">블로그 목록 (표 형식)</h1>
         <table id="tbl" >
             <tr>
                 <th>번호</th>
@@ -15,7 +15,7 @@
             </tr>
             {% for post in posts %}
             <tr>
-                <td>{{ post.id }}</td> <!-- 위에서 in posts 지정했기 때문에 아래도 post.~-->
+                <td>{{ post.id }}</td>
                 <td>{{ post.modify_date|date:"Y년 m월 d일" }}</td>
                 <td><a href='{{ post.get_absolute_url }}'>{{ post.title }}</a></td>
                 <td>{{ post.slug }}</td>
@@ -39,7 +39,7 @@
 
                 &nbsp;&nbsp;(
                 {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
-                &nbsp;&nbsp;)
+                )&nbsp;&nbsp;
 
                 {% if page_obj.has_next %}
                     <!--링크 형식 ?page=3에 주목-->

@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from django.utils.encoding import python_2_unicode_compatible
 from tagging.fields import TagField                 # ch07 추가
 
+
 from django.db import models
 # url 패턴을 만들어주는 장고 내장 함수 reverse()를 위한 임포트
 from django.core.urlresolvers import reverse
